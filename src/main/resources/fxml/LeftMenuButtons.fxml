@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.mycompany.controllers.LeftMenuButtonsController">
+   <children>
+      <ToggleButton fx:id="saleButton" mnemonicParsing="false" onAction="#makeAsale" prefHeight="100.0" prefWidth="150.0" text="%sale">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleButtons" />
+         </toggleGroup></ToggleButton>
+      <ToggleButton fx:id="showItemsButton" mnemonicParsing="false" onAction="#showItems" prefHeight="100.0" prefWidth="150.0" text="%show.items" toggleGroup="$toggleButtons" />
+      <ToggleButton fx:id="showCustomerButton" mnemonicParsing="false" onAction="#showCustomers" prefHeight="100.0" prefWidth="150.0" text="%show.customers" toggleGroup="$toggleButtons" />
+      <ToggleButton fx:id="saleListButton" layoutX="20.0" layoutY="680.0" mnemonicParsing="false" onAction="#showSalesList" prefHeight="100.0" prefWidth="150.0" text="%sale.list" toggleGroup="$toggleButtons" />
+      <ToggleButton fx:id="addItemButton" mnemonicParsing="false" onAction="#addItem" prefHeight="100.0" prefWidth="150.0" text="%add.item" toggleGroup="$toggleButtons" />
+      <ToggleButton fx:id="addCustomerButton" mnemonicParsing="false" onAction="#addCustomer" prefHeight="100.0" prefWidth="150.0" text="%add.customer" toggleGroup="$toggleButtons" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

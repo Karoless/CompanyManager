@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.mycompany.controllers.MainController">
+   <left>
+      <HBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+          <fx:include fx:id="leftMenuButtons" source="LeftMenuButtons.fxml" />
+      </HBox>
+   </left>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="%file">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="%close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="%edit">
+            <items>
+                  <RadioMenuItem mnemonicParsing="false" onAction="#setCaspian" text="%caspian">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="styleGroup" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" onAction="#setModena" selected="true" text="%modena" toggleGroup="$styleGroup" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <CheckMenuItem mnemonicParsing="false" onAction="#setAlwaysOnTop" text="%ontop" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="%help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#about" text="%about" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
